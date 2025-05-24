@@ -3,3 +3,4 @@ evals/
 .env
 .env.*
 */.env
+ubuntu_roocode_implementation/.env

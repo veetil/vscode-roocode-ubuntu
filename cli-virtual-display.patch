@@ -1,0 +1,17 @@
+diff --git a/Roo-Code/evals/apps/cli/src/index.ts b/Roo-Code/evals/apps/cli/src/index.ts
+index xxxxxxx..xxxxxxx 100644
+--- a/Roo-Code/evals/apps/cli/src/index.ts
++++ b/Roo-Code/evals/apps/cli/src/index.ts
+@@ -162,8 +162,10 @@ const runExercise = async ({ run, task, server }: { run: Run; task: Task; server
+ 	await execa({
+ 		env: {
+ 			ROO_CODE_IPC_SOCKET_PATH: taskSocketPath,
+-			DISPLAY: process.env.DISPLAY || ":1", // Use the virtual display
++			DISPLAY: process.env.DISPLAY || ":1", // Use the virtual display
+ 			ELECTRON_ENABLE_SECURITY_WARNINGS: "false", // Disable OS keyring requirement
++			LIBGL_ALWAYS_SOFTWARE: "1", // Force software rendering
++			ELECTRON_DISABLE_GPU: "1", // Disable GPU acceleration
+ 		},
+ 		shell: "/bin/bash",
+-	})`code --disable-workspace-trust --disable-keytar -n ${workspacePath}`
++	})`code --disable-workspace-trust --disable-keytar --disable-gpu --disable-software-rasterizer -n ${workspacePath}`
