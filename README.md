@@ -283,3 +283,8 @@ For more detailed information, please refer to:
 - `DEVELOPER_GUIDE.md`: Guide for developers who want to extend or modify the system
 - `TROUBLESHOOTING.md`: Detailed troubleshooting guide
 - `EXAMPLES.md`: Examples of how to use the RooCode Modular System
+
+
+## Sample workflow command - deep research 
+
+(research-main) ubuntu@ip-172-31-2-87:~/LaunchRoo$ ./workflow-verbose.sh --question "Do deep research on the technology behind Google's veo video generation model introduced in Google I/O 2025" --expt "deep-research" --output "research.md" --timeout 1200 >& log.veo.google
