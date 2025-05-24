@@ -1,2 +1,5 @@
 Roo-Code/
 evals/
+.env
+.env.*
+*/.env
